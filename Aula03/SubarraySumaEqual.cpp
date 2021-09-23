@@ -6,12 +6,23 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    int arr[]={4,5,0,-2,-3,1};
+    int arr[]={1,1,1};
     auto array_length = end(arr) - begin(arr);
     int k;
     cin>>k;
     int contador=0;
-    for(int i=0;i<array_length;i++)
+    int m=0;
+    for(int i=m;i<array_length;i++)
+    {
+        int suma=0;
+        
+        for(int j=m; j<i+1 ;j++)
+            suma+=arr[j];
+        if(suma==k)
+            contador++;
+        m++;
+    }
+    /* for(int i=0;i<array_length;i++)
     {
         for(int j=i;j<array_length;j++)
         {
@@ -20,11 +31,11 @@ int main()
             {
                 suma+=arr[l];
             }
-            if(suma%k==0){
+            if(suma==k){
                 contador++;
             }
         }
-    }
+    } */
     cout<<contador;
 
 
