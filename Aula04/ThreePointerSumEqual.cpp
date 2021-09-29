@@ -10,7 +10,7 @@ int main()
     int arr[]={1,2,4,5,12}; 
     auto len = end(arr) - begin(arr);
 
-    int suma=19;
+    int suma=17;
     int contador=0;
     
     for(int i=0;i<len;i++){
@@ -32,12 +32,13 @@ int main()
                 pointer1++;
                 posicionMid++;
             }
-
-        }
-        if(suma==contador){
+            if(suma==contador){
             cout<<"output"<<"["<<i<<"]"<<"["<<posicionMid<<"]"<<"["<<posicionRight<<"]";
             break;
         }
+
+        }
+        
     }
 
 
