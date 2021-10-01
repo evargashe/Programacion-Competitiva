@@ -14,7 +14,6 @@ int main()
     for(int i=0;i<len;i++)
         cin>>arr[i];
      
-
     int *pointer1=&arr[0];
     int *pointer2=&arr[len-1];
     int contador;
@@ -31,13 +30,14 @@ int main()
             pointer1++;
             posicionLeft++;
         }
-        else if(suma==contador){
-            cout<<"output"<<"["<<posicionLeft<<"]"<<","<<"["<<posicionRight<<"]";
+        else{
             break;
         }
-
-
     }
 
-   
+    if(suma==contador)
+        cout<<"output"<<"["<<posicionLeft<<"]"<<","<<"["<<posicionRight<<"]";
+    else
+        cout<<"IMPOSSIBLE";
+
 }
