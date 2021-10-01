@@ -2,7 +2,7 @@
 
 _Programacion Competitiva_
 
-## Universidad
+## UNIVERSIDAD
 
 _Universidad Nacional de San Agutin_
 
@@ -10,6 +10,7 @@ _Universidad Nacional de San Agutin_
 
 _Ciencia de la computacion_
 
-## Ciclo
 
-_6-toCiclo_
+---
+⌨️ por [EdwarVargas](https://github.com/evargashe)
+
