@@ -94,6 +94,7 @@ dmypy.json
 .pyre/
 # IDEs project files
 .idea
+.vscode-test
 .vscode
 rest-client.env.json
 # Folder view configuration files
