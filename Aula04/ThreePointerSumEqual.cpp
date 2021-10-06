@@ -1,49 +1,62 @@
-#include <bits/stdc++.h>
 
+/* https://cses.fi/problemset/task/1641
+ */
+
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    /* int arr[]={1,2,7,9,11,15}; */
-    int arr[]={1,2,4,5,12}; 
-    auto len = end(arr) - begin(arr);
+    int len;
+    cin>>len;
+    int suma;
+    cin>>suma;
 
-    int suma=17;
-    int contador=0;
+    int arr[len];
+    for(int i = 0; i<len ;i++)
+        cin>>arr[i];
+
     
-    for(int i=0;i<len;i++){
-        int primero=arr[i];
-        int *pointer1=&arr[len/2];
-        int *pointer2=&arr[len-1];
-        int posicionRight=len-1;
-        int posicionMid=len/2;
-        while(suma!=contador && posicionRight<len && posicionMid<len)
-        {
-            contador=primero+(*pointer1)+(*pointer2);
-            if(contador>suma)
-            {
-                pointer2--;
-                posicionRight--;
-            }
-            else if(contador<suma){
+    
 
-                pointer1++;
-                posicionMid++;
-            }
-            if(suma==contador){
-            cout<<"output"<<"["<<i<<"]"<<"["<<posicionMid<<"]"<<"["<<posicionRight<<"]";
-            break;
-        }
-
-        }
-        
+    if(len==1){
+        cout<<"IMPOSSIBLE";
     }
+    else{
+        int primero,segundo,tercero;
+        int contador;
+        for(int i=0; i<len/2 ;i++){
+            primero=i;
+            for(int j=i+1; j<len ; j++)
+            {
+                for(int k= len-1; k>j ; k--){
+                    contador=0;
+                    contador=arr[i]+arr[j]+arr[k];
+                    if(contador==suma)
+                    {
+                        tercero=k;
+                        break;
+                    }
+                } 
+                if(contador==suma)
+                {
+                    segundo=j;
+                    break;
+                }
 
-
-        
-    
-     
-
+            } 
+            if(contador==suma)
+            {
+                break;
+            }
+            
+        }
+        if(suma==contador)
+            cout<<primero+1<<" "<<segundo+1<<" "<<tercero+1;
+        else{
+            cout<<"IMPOSSIBLE";
+        }    
+    }
 }

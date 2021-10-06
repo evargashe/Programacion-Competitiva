@@ -1,3 +1,15 @@
+
+/* Given an array of integers that is already sorted in ascending order,find two numbers 
+such that they add up to a specific target  number. 
+Input: [1, 2, 7, 9, 11, 15]
+target: 11
+Output: [1, 3] 
+positions
+Input: [-1, 1, 2, 3, 5]
+target = 5
+Output: [2, 3] positions
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;

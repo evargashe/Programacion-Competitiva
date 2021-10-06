@@ -1,3 +1,8 @@
+/* Squareeachvaluein a sortedarrayand returntheoutput in sortedorder
+Input: [-4, -3, 1, 2, 3]
+Output: [1, 4, 9, 9, 16] */
+
+
 #include <bits/stdc++.h>
 #include <math.h>
 using namespace std;

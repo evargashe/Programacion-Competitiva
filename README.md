@@ -1,10 +1,10 @@
-# Título del Proyecto
+# TITULO DE PROYECTO
 
 _Programacion Competitiva_
 
 ## UNIVERSIDAD
 
-_Universidad Nacional de San Agutin_
+_Universidad Nacional de San Agustin_
 
 ## ESCUELA
 

@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* Maximumsum of anycontiguoussubarrayof sizek
+Input: [2, 3, 4, 1, 5]
+k: 3
+Output: 10 */
+
 
 void VentanaDeslizante(int a[], int len,int k)
 {

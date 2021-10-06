@@ -2,6 +2,13 @@
 using namespace std;
 
 
+/* Sizeof thesmallestcontiguoussubarraywitha 
+sum greaterthanorequaltoS
+Input: [2, 4, 2, 5, 1]
+S: 7
+Output: 2 */
+
+
 void VentanaDeslizante(int a[], int len,int k)
 {
     int suma;

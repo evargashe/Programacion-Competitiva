@@ -1,6 +1,39 @@
-#include <bits/stdc++.h>
 
+/* https://cses.fi/problemset/task/1640/ */
+
+
+#include <bits/stdc++.h>
+#include <vector>
 using namespace std;
+vector<int> SumTwoValues(vector<int>arr,int len,int suma)
+{
+    int i;
+    vector<int> aux;
+    int j;
+    int s;
+    for(i=0;i<len;i++)
+    {
+        s=0;
+        for( j=len-1; j>i ; j--)
+        {
+            s=0;
+            s=arr[i]+arr[j];
+            if(s==suma)
+                break;
+        }
+        if(s==suma)
+        {
+            aux.push_back(i);
+            aux.push_back(j);
+            return aux;
+            break;
+        }
+    }
+    if(s!=suma)
+    {
+        cout<<"IMPOSSIBLE";
+    }
+}
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -10,34 +43,14 @@ int main()
     int len;
     int suma;
     cin>>len>>suma;
-    int arr[len];
+    vector<int> arr;
+    int dato;
     for(int i=0;i<len;i++)
-        cin>>arr[i];
-     
-    int *pointer1=&arr[0];
-    int *pointer2=&arr[len-1];
-    int contador;
-    int posicionLeft=1;
-    int posicionRight=len;
-    while(posicionRight>posicionLeft)
     {
-        contador=(*pointer2)+(*pointer1);
-        if(contador>suma){
-            pointer2--;
-            posicionRight--;
-        }
-        else if(contador<suma){
-            pointer1++;
-            posicionLeft++;
-        }
-        else{
-            break;
-        }
+        cin>>dato;
+        arr.push_back(dato);
     }
-
-    if(suma==contador)
-        cout<<"output"<<"["<<posicionLeft<<"]"<<","<<"["<<posicionRight<<"]";
-    else
-        cout<<"IMPOSSIBLE";
+    SumTwoValues(arr,len,suma);
+     
 
 }
