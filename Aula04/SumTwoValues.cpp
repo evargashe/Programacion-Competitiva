@@ -5,32 +5,45 @@
 #include <bits/stdc++.h>
 #include <vector>
 using namespace std;
-vector<int> SumTwoValues(vector<int>arr,int len,int suma)
+
+#define ln '\n';
+typedef long long ll;
+
+void SumTwoValues(vector<int>arr,long int len,int suma)
 {
-    int i;
     vector<int> aux;
-    int j;
-    int s;
-    for(i=0;i<len;i++)
-    {
-        s=0;
-        for( j=len-1; j>i ; j--)
+
+    for( auto i=arr.begin(); i!=arr.end();i++)
+        aux.push_back(*i);
+    
+    sort(aux.begin(),aux.end());
+
+    auto a=aux.begin();
+    auto b=aux.end()-1;
+
+    if(aux.size()>1){
+        while(*a != *b)
         {
-            s=0;
-            s=arr[i]+arr[j];
-            if(s==suma)
+            if( *a + *b > suma)
+                b--;
+            else if( *a + *b  < suma)
+                a++;
+            else if( *a + *b == suma);
                 break;
         }
-        if(s==suma)
+        if(*a + *b ==suma)
         {
-            aux.push_back(i);
-            aux.push_back(j);
-            return aux;
-            break;
+            for(int i=0;i<len;i++)
+            {
+                if( arr[i]==*a || arr[i]==*b)
+                    cout<<i+1<<" ";
+            }
+        }
+        else{
+            cout<<"IMPOSSIBLE";
         }
     }
-    if(s!=suma)
-    {
+    else{
         cout<<"IMPOSSIBLE";
     }
 }
@@ -40,7 +53,7 @@ int main()
     cin.tie(NULL);
     
     /* int arr[]={1,2,7,9,11,15}; */
-    int len;
+    long int len;
     int suma;
     cin>>len>>suma;
     vector<int> arr;
