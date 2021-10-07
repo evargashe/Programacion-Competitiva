@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include <vector>
+#include <numeric>
 
 using namespace std;
 int main()
@@ -26,5 +28,6 @@ int main()
     for(int i=0; i<array_length+1;i++)
     {
         cout<<aux[i]<<" ";
-    }
+    } 
+    
 }
