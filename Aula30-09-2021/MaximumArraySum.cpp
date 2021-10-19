@@ -56,14 +56,15 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
     int tam;
-    
+
     cin>>tam;
     int arr[tam];
     for(int i=0;i<tam;i++)
         cin>>arr[i];
 
     VentanaDeslizante(arr,tam);
+    return 0;
 
 }
