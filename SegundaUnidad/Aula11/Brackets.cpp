@@ -1,14 +1,7 @@
 /*
 
+
 https://app.codility.com/programmers/lessons/7-stacks_and_queues/
-
-https://www.urionlinejudge.com.br/judge/en/problems/view/1077
-
-https://www.urionlinejudge.com.br/judge/en/problems/view/1259
-
-https://www.urionlinejudge.com.br/judge/en/problems/view/1566
-
-
 
  */
 #include <bits/stdc++.h>
