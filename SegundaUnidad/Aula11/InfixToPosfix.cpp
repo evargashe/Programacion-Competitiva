@@ -54,7 +54,7 @@ void InfixToPosfix(string s) {
                 cadena+=stk.top();
                 stk.pop();
             }
-            stk.pop()   ;     
+            stk.pop();     
         }
         else{
             while(!stk.empty()  && Peso(c)<=Peso(stk.top()))

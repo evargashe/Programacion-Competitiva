@@ -38,21 +38,24 @@ int main()
     int n;
     scanf("%d",&n);
     int tam;
-    int i;
+    priority_queue<int, vector<int>, 
+                       greater<int>> g;
+    int dato;
     while(n--)
     {
         scanf("%d",&tam);
-        vector<int> a(tam);
-        for(int j=0 ; j< tam ; j++)
+        for(int j=0 ; j < tam ; j++)
         {
-            scanf("%d",&a[j]);
+            scanf("%d",&dato);
+            g.push(dato);
         }
-        sort(a.begin(),a.end());
-        for(i=0 ; i< a.size(); i++)
-            printf("%d ",a[i]);
-        printf("%d",a[tam-1]);
+        while(g.size()>0)
+        {
+            printf("%d ",g.top());
+            g.pop();
+        }
         printf("\n");
-        a.clear();
     }
+    return 0;
 
 }
