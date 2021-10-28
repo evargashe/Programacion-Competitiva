@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 #include <numeric>
 #include <map>
@@ -35,7 +34,7 @@ void capslock(string s)
             }
             else if(cola.empty())
                 cola.push_back('$');
-            
+
         }
         else if(cola.front()=='$')
         {
