@@ -44,50 +44,42 @@ void solution(int N)
                 stk.push_back(stoi(aux, nullptr, 0));
             }
             i=j;
-
         }
-        int verificar=1;
-        bool imprimir=false;
+        bool verificar=true;
+        bool error=false;
         for(int i=0 ; i<operacion.size(); i++)
         {
             if(operacion[i]=='R')
             {
-                verificar++;
+                verificar=!verificar;
             }
-            if(operacion[i]=='D')
+            else
             {
                 if(stk.size()==0)
                 {
-                    imprimir=true;
-                    cout<<"error"<<endl;
+                    error=true;
                     break;
                 }
-                else{
-                    if(verificar%2!=0)
-                    {
-                        stk.pop_front();
-                    }
-                    else{
-                        stk.pop_back();
-                    }
 
-                    if(stk.size()==0)
-                    {
-                        imprimir=true;
-                        cout<<"error"<<endl;
-                        break;
-                    }
+                if(verificar)
+                {
+                    stk.pop_front();
                 }
+                else{
+                    stk.pop_back();
+                }
+                
             }
         }
-
-        if(stk.size()>0)
+        if(error) 
+            cout<<"error"<<endl;
+        else if(!error)
         {
 
             cout<<"[";
             while(!stk.empty())
             {
-                if(verificar%2!=0) {
+                if(verificar) {
                     cout << stk.front();
                     stk.pop_front();
                 }
@@ -103,10 +95,7 @@ void solution(int N)
             cout << "]" << endl;
 
         }
-        else if(!imprimir && stk.size()==0)
-        {
-            cout<<"error"<<endl;
-        }
+
 
     }
 

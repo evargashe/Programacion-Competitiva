@@ -33,7 +33,7 @@ get 2
 */
 
 
-int solution(int N)
+void solution(int N)
 {
     deque<int> stk;
     deque<int> salida;
@@ -46,7 +46,6 @@ int solution(int N)
         if(s=="push_back")
         {
             stk.push_back(dato);
-
         }
         else if(s=="push_front")
         {
@@ -54,16 +53,15 @@ int solution(int N)
         }
         else if(s=="push_middle"){
             int tam=(stk.size()+1)/2;
-            deque<int>::iterator it = stk.begin()+tam;
+            auto it = stk.begin()+tam; // 3 5 9
             stk.insert(it,dato);
         }
         else if(s=="get")
         {
-            deque<int>::iterator it = stk.begin()+dato;
+            auto it = stk.begin()+dato;
             salida.push_back(*it);
         }
 
-        cout<<endl;
     }
     while(!salida.empty())
     {
