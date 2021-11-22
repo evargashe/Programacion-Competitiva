@@ -7,23 +7,23 @@
 
 using namespace std;
 vector<int> asteroidCollision(vector<int>& asteroids) {
-        vector<int> res;
-        for(auto x : asteroids)
+    vector<int> res;
+    for(auto x : asteroids)
+    {
+        if(x > 0) 
+            res.push_back(x);
+        else
         {
-            if(x > 0) 
+            while(res.size() && res.back() > 0 && res.back() < -x) 
+                res.pop_back();
+            if(res.size() && res.back() == -x) 
+                res.pop_back();
+            else if(res.empty() || res.back() < 0) 
                 res.push_back(x);
-            else
-            {
-                while(res.size() && res.back() > 0 && res.back() < -x) 
-                    res.pop_back();
-                if(res.size() && res.back() == -x) 
-                    res.pop_back();
-                else if(res.empty() || res.back() < 0) 
-                    res.push_back(x);
-            }
         }
-        return res;
     }
+    return res;
+}
 int main()
 {
 
