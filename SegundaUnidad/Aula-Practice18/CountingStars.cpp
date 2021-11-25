@@ -31,7 +31,7 @@ int main() {
     
     while(cin >> max_ROW >> max_COL){
         index++;
-        getline(cin, pixels); //flush, so no \n to deal with
+        getline(cin, pixels);
         
         for(i = 0; i < max_ROW; i++){
         getline(cin, pixels);
