@@ -18,7 +18,7 @@ int main() {
     while(true) {
         num = 0;
 
-        scanf("%d%d%d", &a, &b, &n);
+        cin>>a>>b>>n;
         if((a == 0 && b == 0 && n == 0))
             break;
 
