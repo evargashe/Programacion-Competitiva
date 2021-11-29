@@ -1,16 +1,13 @@
+
+
 #include <bits/stdc++.h>
 using namespace std;
-
-
-
-
- 
  
 int main()
 {
     char s[1005][1005];
-char path[1005][1005];
-int n , m;
+    char path[1005][1005];
+    int n , m;
     cin >> n >> m;
     int x1 , y1;
     queue < pair <int , int> > q;
