@@ -1,5 +1,6 @@
-
-
+/* 
+https://cses.fi/problemset/task/1194
+ */
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -69,11 +70,15 @@ int main()
                 string ans;
                 while(x!=x1 || y!=y1)
                 {
-                ans = path[x][y]+ans;
-                if(path[x][y] == 'D') x--;
-                else if(path[x][y]=='U') x++;
-                else if(path[x][y]=='R') y--;
-                else  y++;
+                    ans = path[x][y]+ans;
+                    if(path[x][y] == 'D') 
+                        x--;
+                    else if(path[x][y]=='U') 
+                        x++;
+                    else if(path[x][y]=='R') 
+                        y--;
+                    else  
+                        y++;
                 }
             
                 cout<<"YES"<< endl;
@@ -83,19 +88,23 @@ int main()
             }
             if(x+1>=0 && x+1<n && y>=0 && y<m && s[x+1][y] == '.') 
             { 
-                path[x+1][y] = 'D';q.push({x+1,y}); s[x+1][y] = 'A';
+                path[x+1][y] = 'D';
+                q.push({x+1,y}); s[x+1][y] = 'A';
             }
             if(x-1>=0 && x-1<n && y>=0 && y<m && s[x-1][y] == '.') 
             { 
-                path[x-1][y] = 'U';q.push({x-1,y}); s[x-1][y] = 'A';
+                path[x-1][y] = 'U';
+                q.push({x-1,y}); s[x-1][y] = 'A';
             }
             if(x>=0 && x<n && y+1>=0 && y+1<m && s[x][y+1] == '.') 
             { 
-                path[x][y+1] = 'R';q.push({x,y+1}); s[x][y+1] = 'A';
+                path[x][y+1] = 'R';
+                q.push({x,y+1}); s[x][y+1] = 'A';
             }
             if(x>=0 && x<n && y-1>=0 && y-1<m && s[x][y-1] == '.') 
             { 
-                path[x][y-1] = 'L';q.push({x,y-1}); s[x][y-1] = 'A';
+                path[x][y-1] = 'L';
+                q.push({x,y-1}); s[x][y-1] = 'A';
             }
         }
     }
