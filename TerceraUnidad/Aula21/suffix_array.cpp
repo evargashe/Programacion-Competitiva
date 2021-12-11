@@ -9,7 +9,6 @@ vector<int> SuffixArray(string text){
     vector<int> suffix(n);
 
     for (size_t i = 0; i < n; i++) {
-        // cout<<text.substr(i, n)<<" "<<i<<"\n";
         order_id[text.substr(i, n)] = i;
     }
     int j = 0;
@@ -25,11 +24,11 @@ int main(){
 
     string text;
     cin >> text;
-    vector<int> Suffixarr = SuffixArray(text);
+    vector<int> a = SuffixArray(text);
      
     
-    for (size_t i = 0; i < Suffixarr.size(); i++) {
-        cout << Suffixarr[i] << " ";
+    for (size_t i = 0; i < a.size(); i++) {
+        cout << a[i] << " ";
     }
 
     return 0;
