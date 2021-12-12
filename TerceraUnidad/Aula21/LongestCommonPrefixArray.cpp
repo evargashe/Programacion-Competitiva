@@ -17,7 +17,7 @@ map<string,int> SuffixArray(string text){
 
 }
 
-int  longestCommonPrefix(string text){
+void  LCP(string text){
     map<string,int> Suffix = SuffixArray(text);
     map<string,int> lcp;
     map<string,int>::iterator it=Suffix.begin();
@@ -30,7 +30,7 @@ int  longestCommonPrefix(string text){
     string prev = it->first;
     lcp[prev] = 0;
     it++;
-    int max_ = 0;
+    //int max_ = 0;
 
     while (it!=Suffix.end())
     {
@@ -43,7 +43,7 @@ int  longestCommonPrefix(string text){
             else break;
             
         }
-        max_ = max(max_,cnt_equal);
+        //max_ = max(max_,cnt_equal);
         lcp[current] = cnt_equal;
         prev = current;
         it++;
@@ -53,7 +53,7 @@ int  longestCommonPrefix(string text){
         cout<<x.second<<" "<<x.first<<"\n";
     }
     
-    return max_;
+    /* return max_; */
 
 }
 
@@ -61,7 +61,7 @@ int main(){
     
     string text;
     cin >> text;
-    cout << longestCommonPrefix(text)<<"\n";
+    LCP(text);
     
 
     return 0;
