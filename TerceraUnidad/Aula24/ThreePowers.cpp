@@ -2,30 +2,27 @@
  */
 #include <bits/stdc++.h>
 using namespace std;
-
-
-
 void solve(int n){
-    vector<long long int> v;
 
-    long long int curr=1;
-    while(n>0)
-    {
-        if(n%2==1)
-            v.push_back(curr);
-        curr*=3;
-        n/=2;
+    int shifts = 0;
+    int elements = 0;
+    cout << "{" ;
+    while(n>0){
+        if(n&1 == 1){
+            if(elements == 0){
+                cout << pow(3,shifts) << " ";
+            }
+            else{
+                cout << ", " << pow(3,shifts) << " ";
+            }
+            elements++;
+        }
+        n >>=1;
+        shifts++;
     }
-    printf("{ ");
-    for(int i=0 ; i<v.size(); i++)
-    {
-        printf("%d",v[i]);
-        if(i!=v.size()-1)
-            printf(", ");
-        printf(" ");
+    cout << "}";
 
-    }
-    printf("}\n");
+
 }
 
 int main(){
