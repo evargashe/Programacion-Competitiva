@@ -1,4 +1,4 @@
-# TITULO DE PROYECTO
+# DATOS DEL CURSO
 
 _Programacion Competitiva_
 
