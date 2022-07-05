@@ -14,3 +14,10 @@ _Ciencia de la computacion_
 ---
 ⌨️ por [EdwarVargas](https://github.com/evargashe)
 
+## Modelos de base de datos
+Los modelos de desarrollaron en la pagina Moqups donde creamos nuestros modelos de la base de datos
+### Modelo Entidad Relacional
+![Modelo Entidad Relacional](https://user-images.githubusercontent.com/49489730/177255649-5dbc9141-043f-4306-93d6-f55dda8c002f.PNG)
+
+### Modelo Relacional 
+![Modelo Relacional](https://user-images.githubusercontent.com/49489730/177255661-6a58a20a-641b-41b5-814a-e937894d21ba.PNG)
